@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 def hey(phrase):
 	if not isinstance(phrase, "".__class__):
 		raise ValueError("phrase must be a string")
