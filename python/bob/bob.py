@@ -18,21 +18,8 @@ def  __is_empty_phrase(phrase):
 	return len(phrase.strip()) == 0
  
 def __is_a_shout(phrase):
-	is_a_shout = False
-	for c in phrase:
-		if c.isalpha():
-			if c.upper() == c:
-				is_a_shout = True
-			else:
-				is_a_shout = False
-				break
-	
-	return is_a_shout
+	return phrase.isupper()
 			
 def __is_a_question(phrase):
 	trimmed = phrase.strip();
-	if len(trimmed) > 0 and trimmed[-1] == "?":
-		return True
-	else:
-		return False
-	
+	return len(trimmed) > 0 and trimmed[-1] == "?"
